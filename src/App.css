@@ -1,0 +1,30 @@
+.App {
+  font-family: 'Helvetica Neue';
+}
+
+/* raised card animation class */
+.raisedCard {
+
+  color: black;
+  background: #FFFFFF;
+  border-radius: 2px;
+
+  transition: 0.3s ease !important;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+
+
+}
+
+.raisedCard:hover{
+  transition: all .3s ease !important;
+  box-shadow: -1px 5px 9px 0px rgba(0,0,0,0.4);
+  transform: translateY(-3px);
+
+}
+
+.regularPadding {
+
+  padding: 5%;
+
+
+}
