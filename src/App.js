@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import { Button, Paper, AppBar, Toolbar, Grid } from '@material-ui/core';
+import { Button, Paper, AppBar, Toolbar, Grid, Card, CardActionArea, CardMedia, CardContent, CardActions } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Navbar from './Components/Navbar/Navbar'
 import './App.css';
@@ -13,17 +13,13 @@ const useStyles = makeStyles((theme) => ({
 
   appBarSpacing: theme.mixins.toolbar,
   sectionContainers: {
-    border: '2px solid red',
-    height: '50vh',
+    height: '100%',
     marginTop: '10%',
     marginBottom: '10%',
     overflow: 'hidden',
   },
   primaryHeader: {
     fontWeight: 600,
-
-
-
   },
   secondaryHeader: {
 
@@ -37,10 +33,31 @@ const useStyles = makeStyles((theme) => ({
   },
   heroText: {
     marginBottom: '5%',
+  },
+  btn: {
+    background: 'white',
+    color: 'black',
+
+  },
+  btnCase: {
+    textAlign: 'center',
+    width: '100%'
+  },
+  cardStyle: {
+    background: '#eaeaea',
+    marginTop: '3%',
+    marginBottom: '3%',
+    maxWidth: '100%',
+
+  },
+  wrapping: {
+    overflowWrap: 'break-word'
   }
 
 
 }));
+
+
 
 function App() {
 
@@ -73,7 +90,7 @@ function App() {
 
 
               </div>
-              <Button className="raisedCard" size='large' variant="contained">START A PROJECT</Button>
+              <Button className={"raisedCard " + classes.btn} size='large' variant="contained">START A PROJECT</Button>
 
 
 
@@ -89,75 +106,99 @@ function App() {
 
             <Grid item md={12}>
 
-            </Grid>
+              {/* simulated letter animation */}
 
-          </Grid>
-
-          <Grid className={classes.sectionContainers} spacing={4} >
-            <Grid item md={12}>
-
-              <Paper className="raisedCard">
-
-                <Grid item md={12}>
-
-                  <Typography variant={"h1"}>aksdjflkasjdf</Typography>
-
-
-                </Grid>
-
-
-              </Paper>
-
-            </Grid>
-
-            <Grid item md={12}>
-
-              <Paper className="raisedCard">
-
-                <Grid item md={12}>
-
-                  <Typography variant={"h1"}>aksdjflkasjdf</Typography>
-
-
-                </Grid>
-
-
-              </Paper>
 
             </Grid>
 
           </Grid>
 
-          <Grid style={{background: 'orange'}} className={classes.sectionContainers} spacing={4} >
+          {/* end home section */}
+
+
+          <Grid container className={classes.sectionContainers} spacing={4}>
+
+            <Grid item md={4}>
+
+              <Card className={classes.cardStyle + " raisedCard"}>
+                <CardActionArea>
+
+                  <CardContent className={classes.wrapping}>
+                    <Typography className={classes.primaryHeader} variant="h4">Testing</Typography>
+                      <Typography variant="p">Testingaslkdfja;lksjdfl;ajdkajd;fkjaksldjf;alkjsf;kajs;dlfkja;sdkjf;akjsdf;akjsf;akjdf;kja;lksjf;lkj;askdfj;laksjfd;akjsfd;akjdsf;lk</Typography>
+
+                  </CardContent>
+                </CardActionArea>
+                <CardActions >
+                  <span className={classes.btnCase}>
+                    <Button className={classes.btn} size="large" color="secondary">
+                    Learn More
+                    </Button>
+                  </span>
+
+                </CardActions>
+              </Card>
+
+            </Grid>
+
+            <Grid item md={4}>
+              <Card className={classes.cardStyle + " raisedCard"}>
+                <CardActionArea>
+
+                  <CardContent className={classes.wrapping}>
+                    <Typography className={classes.primaryHeader} variant="h4">Testing</Typography>
+                      <Typography variant="p">Testingaslkdfja;lksjdfl;ajdkajd;fkjaksldjf;alkjsf;kajs;dlfkja;sdkjf;akjsdf;akjsf;akjdf;kja;lksjf;lkj;askdfj;laksjfd;akjsfd;akjdsf;lk</Typography>
+
+                  </CardContent>
+                </CardActionArea>
+                <CardActions >
+                  <span className={classes.btnCase}>
+                    <Button className={classes.btn} size="large" color="secondary">
+                    Learn More
+                    </Button>
+                  </span>
+
+                </CardActions>
+              </Card>
+
+
+            </Grid>
+
+            <Grid item md={4}>
+              <Card className={classes.cardStyle + " raisedCard"}>
+                <CardActionArea>
+
+                  <CardContent className={classes.wrapping}>
+                    <Typography className={classes.primaryHeader} variant="h4">Testing</Typography>
+                      <Typography variant="p">Testingaslkdfja;lksjdfl;ajdkajd;fkjaksldjf;alkjsf;kajs;dlfkja;sdkjf;akjsdf;akjsf;akjdf;kja;lksjf;lkj;askdfj;laksjfd;akjsfd;akjdsf;lk</Typography>
+
+                  </CardContent>
+                </CardActionArea>
+                <CardActions >
+                  <span className={classes.btnCase}>
+                    <Button className={classes.btn} size="large" color="secondary">
+                    Learn More
+                    </Button>
+                  </span>
+
+                </CardActions>
+              </Card>
+
+
+            </Grid>
+
+          </Grid>
+
+          <Grid className={classes.sectionContainers} spacing={4}>
             <Grid item md={12}>
 
-              <Paper className="raisedCard">
 
-                <Grid item md={12}>
-
-                  <Typography variant={"h1"}>aksdjflkasjdf</Typography>
-
-
-                </Grid>
-
-
-              </Paper>
 
             </Grid>
 
             <Grid item md={12}>
 
-              <Paper className="raisedCard">
 
-                <Grid item md={12}>
-
-                  <Typography variant={"h1"}>aksdjflkasjdf</Typography>
-
-
-                </Grid>
-
-
-              </Paper>
 
             </Grid>
 

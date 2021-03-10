@@ -5,6 +5,7 @@ import Box from '@material-ui/core/Box';
 import { Button, Paper, AppBar, Toolbar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import './Navbar.css';
+import '../../App.css';
 import logo from '../../assets/imgs/five.PNG'
 
 const useStyles = makeStyles((theme) => ({
@@ -56,17 +57,45 @@ const Navbar = (props) => {
 
               {
 
-                <Button variant="contained" color="secondary">
-                  Secondary Button
+                <Button className={"navi l-through"} color="inherit">
+                  Home
                 </Button>
 
 
               }
               {
-                <Button variant="contained" color="secondary">
-                Secondary Button
+                <Button color="inherit">
+                  Story
                 </Button>
               }
+              {
+
+                <Button  color="inherit">
+                  Specializations
+                </Button>
+
+
+              }
+              {
+                <Button color="inherit">
+                  Art
+                </Button>
+              }
+
+              {
+
+                <Button  color="inherit">
+                  Support
+                </Button>
+
+
+              }
+              {
+                <Button color="inherit">
+                  Contact
+                </Button>
+              }
+
 
             </div>
 
